@@ -34,13 +34,13 @@ function bot($method,$datas=[]){
 	'action'=>$action
 	]);
 	}
-	//====================ᵗᶦᵏᵃᵖᵖ======================//
+	//====================tikapp======================//
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
 $from_id = $message->from->id;
 $chat_id = $message->chat->id;
 $text = $message->text;
-//====================ᵗᶦᵏᵃᵖᵖ======================//
+//====================tikapp======================//
 if(preg_match('/^\/([Ss]tart)/',$text)){
         bot('sendmessage', [
                 'chat_id' => $chat_id,
@@ -62,5 +62,5 @@ $text = $message->text;
  file_put_contents('vo.ogg',$vo);
 		   sendvoice($chat_id , new CURLFile('vo.ogg') , '@tikapp');
     }
-//====================ᵗᶦᵏᵃᵖᵖ======================//
-		?>
+//====================tikapp======================/
+?>
